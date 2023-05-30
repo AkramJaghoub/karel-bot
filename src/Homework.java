@@ -10,7 +10,7 @@ public class Homework extends SuperKarel {
         drawAndCalculateHeight();
         validateDimensions();
         drawInnerChambers();
-        if ((isOdd(width) && isOdd(height)) || (isOdd(width) != isOdd(height)))
+        if ((isOdd(width) && isOdd(height)) || (isOdd(width) != isOdd(height)))   // if the width and height are both odd or if one them is odd or even draw the width (after the inner)
             drawWidth();
     }
 
@@ -20,11 +20,6 @@ public class Homework extends SuperKarel {
         this.width = 0;
         this.height = 0;
         steps = 0;
-    }
-
-    // checks if the given parameter (width or height) is odd, note here that the odd is (n % 2 == 0) because I started the count from 0
-    private boolean isOdd(int dimension) {
-        return dimension % 2 == 0;
     }
 
     // handles special cases where there is small worlds
@@ -265,5 +260,10 @@ public class Homework extends SuperKarel {
     private void steps() {
         move();
         System.out.println("number of steps: " + ++this.steps);
+    }
+
+    // checks if the given parameter (width or height) is odd, note here that the odd is (n % 2 == 0) because I started the count from 0
+    private boolean isOdd(int dimension) {
+        return dimension % 2 == 0;
     }
 }
