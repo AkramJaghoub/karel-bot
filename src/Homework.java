@@ -10,7 +10,7 @@ public class Homework extends SuperKarel {
         drawAndCalculateHeight();
         validateDimensions();
         drawInnerChambers();
-        if ((isOdd(width) && isOdd(height)) || (isOdd(width) != isOdd(height)))   // if the width and height are both odd or if one them is odd or even draw the width (after the inner)
+        if ((isOdd(width) && isOdd(height)) || (isOdd(width) != isOdd(height))) // if the width and height are both odd or if one them is odd or even draw the width (after the inner)
             drawWidth();
     }
 
