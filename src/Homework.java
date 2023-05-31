@@ -219,6 +219,7 @@ public class Homework extends SuperKarel {
         if (!isOdd(width)) { // if both were even
             int startingPoint = ((width / 2) * 2) + (width + 2);
             drawLines(startingPoint);
+            turnLeft();
         } else { // if the height was even and the width is odd
             int counter = height - calculateStart(findMinimumDimension() - 2);
             if(isWidthOddAndBigger()) // handles special cases
@@ -229,8 +230,6 @@ public class Homework extends SuperKarel {
             int startingPoint = 2 * width - 1;
             drawLines(startingPoint);
         }
-        if (facingWest())
-            turnLeft();
     }
 
     // draws the horizontal lines based on a starting point
