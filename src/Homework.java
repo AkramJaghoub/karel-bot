@@ -2,7 +2,7 @@ import stanford.karel.SuperKarel;
 public class Homework extends SuperKarel {
     private int width; // world width
     private int height; // world height
-    private int steps; // number of steps karel had taken
+    private int steps; // number of steps karel had take
 
     public void run() {
         initialize();
@@ -22,7 +22,7 @@ public class Homework extends SuperKarel {
         steps = 0;
     }
 
-    // handles special cases where there is small worlds
+    //    // handles special cases where there is small worlds
     private void validateDimensions() {
         if (width <= 3 || height <= 3)
             throw new IllegalArgumentException("Try a dimension that is larger than 4!!");
@@ -113,7 +113,8 @@ public class Homework extends SuperKarel {
 
     // calculates where to begin drawing the squares (inner chambers)
     private int calculateStart(int minimum) {
-        return (width < height) ? ((height / 2) - calculateSquareLength(minimum) / 2) : 1; // the return 1 means if height is bigger than or equal the width the square will always be 1 dimension less than the border
+        // the return 1 means if height is bigger than or equal the width the square will always be 1 dimension less than the border
+        return (width < height) ? ((height / 2) - calculateSquareLength(minimum) / 2) : 1;
     }
 
    // moves to the square start point after calculating it
@@ -202,7 +203,7 @@ public class Homework extends SuperKarel {
             counter++;
         skipPoints(counter);
         turnRight();
-        fillWidth(); // fills or draws the actual horizontal line
+        fillWidth(); // fills or draws the actual horizontal lin
         turnAround();
         fillWidth();
     }
@@ -262,7 +263,5 @@ public class Homework extends SuperKarel {
     }
 
     // checks if the given parameter (width or height) is odd, note here that the odd is (n % 2 == 0) because I started the count from 0
-    private boolean isOdd(int dimension) {
-        return dimension % 2 == 0;
-    }
+    private boolean isOdd(int dimension) {return dimension % 2 == 0;}
 }
